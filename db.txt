@@ -1,0 +1,125 @@
+STEAMWEB - DATABASE SCHEMA (Cập nhật: 01/02/2026)
+==============================================
+
+Nguồn chuẩn: database/migration.sql + add-cart-tables.sql + steamweb-optimizations.sql
+
+====================================================
+1) USERS
+====================================================
+users
+- id, username, email, password_hash, full_name, phone, avatar_url
+- role (user/admin), status (active/banned)
+- created_at, updated_at
+
+user_profiles
+- user_id (PK, FK users.id), vip_level, total_deposit, monthly_deposit, last_deposit_at
+
+====================================================
+2) CATEGORIES
+====================================================
+categories
+- id, name, slug (unique), icon, sort_order, is_active
+
+====================================================
+3) PRODUCTS
+====================================================
+products
+- id, name, slug (unique), price, sale_price, badge
+- image, description, content, received_content
+- rating, category_id (FK), status (active/hidden)
+- created_at, updated_at
+
+GHI CHÚ:
+- Code đang dùng thêm: is_hot, gallery, video_url (nếu DB chưa có thì cần bổ sung cột).
+
+====================================================
+4) ORDERS & ORDER_ITEMS
+====================================================
+orders
+- id, user_id (FK), total_amount, status, payment_method
+- created_at, updated_at
+
+order_items
+- id, order_id (FK), product_id (FK), price, quantity, subtotal
+
+====================================================
+5) WALLETS & TRANSACTIONS
+====================================================
+wallets
+- user_id (PK, FK), balance, updated_at
+
+transactions
+- id, user_id (FK), type (purchase/deposit/refund), amount, description, created_at
+
+wallet_transactions
+- id, user_id (FK), type (deposit/purchase/refund/adjustment)
+- amount, reference_id, description, created_at, updated_at
+
+====================================================
+6) DEPOSITS
+====================================================
+deposits
+- id, user_id (FK), amount, method, status, created_at
+
+deposit_transactions
+- id, user_id (FK), bank_account_id (FK), gateway_id (FK)
+- amount, fee, final_amount, status, transaction_code, gateway_reference
+- notes, created_at, updated_at
+
+====================================================
+7) CART & PROMOTIONS
+====================================================
+cart
+- id, user_id (FK), product_id (FK), quantity, added_at, updated_at
+- unique (user_id, product_id)
+
+promotion_codes
+- id, code (unique), discount_percent, discount_amount
+- max_uses, used_count, start_date, end_date, status, created_at
+
+promotion_code_usages (steamweb-optimizations.sql)
+- id, promotion_code_id (FK), user_id (FK), order_id (FK), used_at
+
+====================================================
+8) BANNERS / POSTS / SEARCH / SETTINGS
+====================================================
+banners
+- id, title, image_url, link_url, position (slide/category), is_active, sort_order
+
+posts
+- id, title, slug (unique), excerpt, content, image_url
+- category (blog/news/guide), is_active, created_at, updated_at
+
+search_logs
+- id, user_id (FK), keyword, created_at
+
+settings
+- id, key (unique), value
+
+====================================================
+9) PAYMENT CONFIG
+====================================================
+payment_gateways
+- id, name, code, api_key, api_secret, webhook_url, config_json
+- is_active, sort_order, created_at, updated_at
+
+bank_accounts
+- id, gateway_id (FK), bank_name, bank_code, account_number, account_holder
+- icon_url, description, total_received, max_amount_threshold
+- is_active, sort_order, created_at, updated_at
+
+====================================================
+10) ORDER STATUS HISTORY (steamweb-optimizations.sql)
+====================================================
+order_status_history
+- id, order_id (FK), old_status, new_status, note, changed_by, created_at
+
+====================================================
+CHỈ SỐ & HIỆU NĂNG
+====================================================
+- Index đã có: users.email/username/role, categories.slug/is_active,
+  products.slug/category_id/status, orders.user_id/status, cart.user_id/product_id...
+- Khuyến nghị: thêm is_hot cho products nếu dùng lọc Hot trên Steam Games.
+
+
+```

@@ -1,0 +1,442 @@
+STEAMWEB - DANH SÁCH FILE ĐẦY ĐỦ + CHỨC NĂNG (Cập nhật: 01/02/2026)
+=============================================================
+
+1) FILE GỐC (ROOT)
+-------------------------------------------------------------
+.env                               - cấu hình môi trường (DB/APP)
+.gitignore                         - cấu hình file bỏ qua khi git
+.htaccess                          - rewrite URL, cấu hình web root
+ADMIN_ARCHITECTURE.md              - mô tả kiến trúc admin
+ADMIN_MODULARIZATION.md            - tài liệu tách module admin
+ADMIN_PANEL_README.md              - hướng dẫn admin panel
+DELIVERY_SUMMARY.md                - tổng kết bàn giao
+DOCUMENTATION_INDEX.md             - mục lục tài liệu
+DOWNLOAD_SYSTEM_GUIDE.md           - hướng dẫn hệ thống tải game
+GAME_DOWNLOAD_ARCHITECTURE.md      - kiến trúc tải game
+GAME_DOWNLOAD_DEPLOYMENT.txt       - ghi chú triển khai tải game
+GAME_DOWNLOAD_README.md            - README tải game
+GAME_DOWNLOAD_SUMMARY.md           - tóm tắt tải game
+GAME_DOWNLOAD_TESTING.md           - test tải game
+IMPLEMENTATION_VERIFICATION.md     - xác minh triển khai
+MODULARIZATION_COMPLETE.md         - hoàn tất modularization
+MODULARIZATION_SUMMARY.md          - tóm tắt modularization
+PROJECT_FILES.md                   - danh sách file dự án
+QUICK_START.md                     - hướng dẫn chạy nhanh
+README.md                          - mô tả dự án chính
+WEBHOOK_SETUP.md                   - cấu hình webhook thanh toán
+DELIVERY_SUMMARY.md                - ghi chú bàn giao
+doc.txt                            - tài liệu tổng hợp (file này)
+db.txt                             - schema DB hiện tại
+index.php                          - entry point root
+test-session.php                   - test session
+
+2) APP (BACKEND)
+-------------------------------------------------------------
+app/Controllers/AddToCartController.php   - thêm sản phẩm vào giỏ
+app/Controllers/AdminBannerController.php - CRUD banner admin
+app/Controllers/AdminBankController.php   - quản lý ngân hàng thanh toán
+app/Controllers/AdminCategoryController.php - CRUD danh mục admin
+app/Controllers/AdminController.php       - controller admin tổng
+app/Controllers/AdminGameDownloadController.php - quản trị download
+app/Controllers/AdminPaymentController.php - quản lý thanh toán
+app/Controllers/AdminProductController.php - CRUD sản phẩm
+app/Controllers/AdminUserController.php    - quản lý người dùng
+app/Controllers/AuthController.php         - đăng nhập/đăng xuất
+app/Controllers/CartController.php         - giỏ hàng
+app/Controllers/DepositWebhookController.php - webhook nạp tiền
+app/Controllers/GameContentController.php  - nội dung game
+app/Controllers/HomeController.php         - trang chủ
+app/Controllers/ProductController.php      - sản phẩm
+app/Controllers/ProfileController.php      - hồ sơ user
+
+app/Helpers/functions.php                  - helper format, slug, utils
+app/Middleware/AuthMiddleware.php          - kiểm tra login/role
+app/Models/Product.php                     - model sản phẩm (query)
+
+3) CONFIG
+-------------------------------------------------------------
+config/config.php                          - APP_URL, hằng số
+config/database.php                        - PDO database wrapper
+
+4) DATABASE SQL
+-------------------------------------------------------------
+database/migration.sql                     - schema + seed chính
+database/add-cart-tables.sql               - bảng cart + promotion
+database/add-banner-position.sql           - thêm position cho banner
+database/add-game-downloads.sql            - bảng download game
+database/add-received-content.sql          - thêm received_content
+database/add-wallet-system.sql             - ví + giao dịch
+database/fix-order-total.sql               - fix total orders
+database/payment-system.sql                - hệ thanh toán
+database/steamweb-optimizations.sql         - tối ưu/index/trigger
+
+5) PUBLIC ROOT
+-------------------------------------------------------------
+public/index.php                           - entry point public
+public/webhook/seapay.php                  - webhook SeaPay
+public/assets/style.css                    - CSS legacy/tổng
+public/assets/admin.js                     - JS legacy admin
+
+5.1) PUBLIC ASSETS - CSS
+-------------------------------------------------------------
+public/assets/css/admin.css                - UI admin
+public/assets/css/banner.css               - banner UI
+public/assets/css/base.css                 - reset + theme
+public/assets/css/cart.css                 - giỏ hàng
+public/assets/css/footer.css               - footer
+public/assets/css/game-card.css            - card game
+public/assets/css/game-content.css         - content game
+public/assets/css/game-review.css          - review cards
+public/assets/css/guide.css                - guide/news
+public/assets/css/header.css               - header/nav
+public/assets/css/home.css                 - trang chủ
+public/assets/css/notification.css         - thông báo
+public/assets/css/profile.css              - profile
+public/assets/css/section.css              - section header
+public/assets/css/top-recharge.css          - top recharge
+public/assets/css/video-gallery.css        - video gallery
+
+5.2) PUBLIC ASSETS - JS
+-------------------------------------------------------------
+public/assets/js/add-to-cart.js             - add to cart
+public/assets/js/admin-categories.js        - CRUD danh mục UI
+public/assets/js/admin-hot.js               - toggle hot
+public/assets/js/admin-products.js          - CRUD sản phẩm UI
+public/assets/js/banner.js                  - banner slider
+public/assets/js/cart-management.js         - quản lý giỏ
+public/assets/js/cart.js                    - giỏ hàng
+public/assets/js/game-card.js               - hover card
+public/assets/js/game-content.js            - nội dung game
+public/assets/js/game-review.js             - review UI
+public/assets/js/navigation.js              - active menu
+public/assets/js/profile.js                 - profile page
+public/assets/js/search.js                  - search UI
+public/assets/js/sound-manager.js           - âm thanh
+public/assets/js/top-recharge.js            - top recharge
+
+5.3) PUBLIC ASSETS - MEDIA
+-------------------------------------------------------------
+public/assets/svg/icons.svg                 - icon sprite
+public/assets/sounds/README.md              - mô tả sounds
+public/assets/sounds/som_matricula-464025.mp3 - audio sample
+
+6) VIEWS - PARTIALS
+-------------------------------------------------------------
+views/partials/header.php                   - header wrapper
+views/partials/header-layout.php            - header layout chính
+views/partials/footer.php                   - footer wrapper
+views/partials/footer-layout.php            - footer layout chính
+views/partials/admin-sidebar.php            - sidebar admin (legacy)
+
+7) VIEWS - COMPONENTS (CLIENT)
+-------------------------------------------------------------
+views/components/banner.php                 - banner section
+views/components/game-hot.php               - game hot grid
+views/components/game-review.php            - game review cards
+views/components/guide.php                  - guide/news cards
+views/components/top-recharge.php           - top recharge
+views/components/video-gallery.php          - video gallery
+
+8) VIEWS - CLIENT PAGES
+-------------------------------------------------------------
+views/client/cart.php                       - giỏ hàng
+views/client/checkout.php                   - thanh toán
+views/client/deposit.php                    - nạp tiền
+views/client/deposit-callback.php           - callback nạp
+views/client/deposit-payment.php            - chọn phương thức nạp
+views/client/game-content.php               - nội dung game
+views/client/game-content-view.php          - xem nội dung game
+views/client/hot.php                        - sản phẩm hot
+views/client/index.php                      - trang chủ client
+views/client/login.php                      - đăng nhập
+views/client/new.php                        - sản phẩm mới
+views/client/product-detail.php             - chi tiết game
+views/client/profile.php                    - trang profile
+views/client/register.php                   - đăng ký
+views/client/search.php                     - tìm kiếm
+views/client/steam-games.php                - danh sách game + filter + pagination
+
+9) VIEWS - ADMIN PAGES
+-------------------------------------------------------------
+views/admin/categories.php                  - CRUD danh mục
+views/admin/dashboard.php                   - dashboard + banner
+views/admin/hot-products.php                - quản lý hot
+views/admin/layout.php                      - layout admin
+views/admin/payments.php                    - quản lý thanh toán
+views/admin/product-content.php             - nội dung sản phẩm
+views/admin/products.php                    - CRUD sản phẩm
+views/admin/sidebar.php                     - sidebar admin
+views/admin/users.php                       - quản lý user
+views/admin/EXAMPLE-PAGE-TEMPLATE.php        - mẫu trang admin
+
+9.1) VIEWS - ADMIN COMPONENTS
+-------------------------------------------------------------
+views/admin/components/alert.php            - alert component
+views/admin/components/header.php           - header admin
+views/admin/components/modal.php            - modal admin
+views/admin/components/payments-content.php - nội dung payments
+views/admin/components/table.php            - table component
+views/admin/components/tabs.php             - tabs component
+views/admin/components/EXAMPLE-CONTENT.php   - content mẫu
+
+10) VENDOR
+-------------------------------------------------------------
+vendor/                                      - thư viện composer (nếu có)
+
+=============================================================
+SƠ ĐỒ LIÊN KẾT HIỆN TẠI (LUỒNG CHÍNH)
+-------------------------------------------------------------
+PUBLIC ENTRY
+public/index.php
+	├─ include views/partials/header.php
+	│    └─ include views/partials/header-layout.php
+	├─ load views/client/index.php (home)
+	└─ include views/partials/footer.php
+			 └─ include views/partials/footer-layout.php
+
+CLIENT PAGES (direct view)
+views/client/steam-games.php
+	├─ require config/config.php + config/database.php
+	├─ query categories/products (Database)
+	├─ include SVG icons (public/assets/svg/icons.svg)
+	├─ include header/footer partials
+	└─ load CSS/JS assets (public/assets/css/*.css, js/*.js)
+
+views/client/product-detail.php
+	├─ query product + category
+	└─ include components (banner/game-hot/guide...) + partials
+
+ADMIN FLOW
+views/admin/*.php
+	├─ session check (admin)
+	├─ include views/admin/sidebar.php
+	├─ render table/form
+	└─ gọi JS admin (public/assets/js/admin-*.js)
+
+Admin JS → Controllers
+public/assets/js/admin-products.js
+	└─ fetch app/Controllers/AdminProductController.php (create/update/delete)
+
+public/assets/js/admin-hot.js
+	└─ fetch app/Controllers/AdminProductController.php (toggleHot)
+
+public/assets/js/admin-categories.js
+	└─ fetch app/Controllers/AdminCategoryController.php (create/update/delete)
+
+Controllers → Database
+app/Controllers/*
+	└─ dùng config/database.php (PDO wrapper) để query
+
+Database Layer
+config/database.php
+	└─ PDO connect → MySQL
+
+Schema Source
+database/migration.sql + database/add-cart-tables.sql + database/steamweb-optimizations.sql
+
+=============================================================
+SƠ ĐỒ TỔNG QUAN KIẾN TRÚC (FULL)
+-------------------------------------------------------------
+			    ┌────────────────────────────────────┐
+			    │            CLIENT BROWSER            │
+			    └────────────────────────────────────┘
+						  │
+						  ▼
+			    ┌────────────────────────────────────┐
+			    │        APACHE / PHP (XAMPP)         │
+			    └────────────────────────────────────┘
+						  │
+						  ▼
+			    ┌────────────────────────────────────┐
+			    │            PUBLIC ROOT             │
+			    │        public/index.php            │
+			    └────────────────────────────────────┘
+						  │
+			 ┌───────────────┼────────────────┬────────────────┐
+			 ▼               ▼                ▼                ▼
+	┌────────────────┐ ┌────────────────┐ ┌───────────────┐ ┌───────────────┐
+	│ CLIENT VIEWS   │ │ ADMIN VIEWS    │ │  PUBLIC ASSETS │ │  WEBHOOKS     │
+	│ views/client/* │ │ views/admin/*  │ │ css/js/svg     │ │ public/webhook│
+	└────────────────┘ └────────────────┘ └───────────────┘ └───────────────┘
+			 │               │
+			 │               ▼
+			 │     ┌───────────────────────────┐
+			 │     │ ADMIN JS (fetch API)       │
+			 │     │ public/assets/js/admin-*   │
+			 │     └───────────────────────────┘
+			 │               │
+			 ▼               ▼
+	┌─────────────────────────────────────────────────────┐
+	│                  CONTROLLERS (APP)                  │
+	│ app/Controllers/*                                    │
+	│ - Auth, Cart, Product, Admin*, Payments, Webhook     │
+	└─────────────────────────────────────────────────────┘
+						  │
+						  ▼
+	┌─────────────────────────────────────────────────────┐
+	│                   DATABASE LAYER                    │
+	│ config/database.php (PDO wrapper)                   │
+	└─────────────────────────────────────────────────────┘
+						  │
+						  ▼
+	┌─────────────────────────────────────────────────────┐
+	│                     MYSQL DB                        │
+	│ tables: users, products, categories, orders, cart... │
+	└─────────────────────────────────────────────────────┘
+						  │
+						  ▼
+	┌─────────────────────────────────────────────────────┐
+	│                SQL MIGRATIONS/SEEDS                 │
+	│ database/*.sql                                      │
+	└─────────────────────────────────────────────────────┘
+
+SƠ ĐỒ TỔNG QUAN (DẠNG CÂY CHI TIẾT)
+-------------------------------------------------------------
+steamweb/
+├── app/
+│   ├── Controllers/
+│   │   ├── AddToCartController.php
+│   │   ├── AdminBannerController.php
+│   │   ├── AdminBankController.php
+│   │   ├── AdminCategoryController.php
+│   │   ├── AdminController.php
+│   │   ├── AdminGameDownloadController.php
+│   │   ├── AdminPaymentController.php
+│   │   ├── AdminProductController.php
+│   │   ├── AdminUserController.php
+│   │   ├── AuthController.php
+│   │   ├── CartController.php
+│   │   ├── DepositWebhookController.php
+│   │   ├── GameContentController.php
+│   │   ├── HomeController.php
+│   │   ├── ProductController.php
+│   │   └── ProfileController.php
+│   ├── Helpers/
+│   │   └── functions.php
+│   ├── Middleware/
+│   │   └── AuthMiddleware.php
+│   └── Models/
+│       └── Product.php
+├── config/
+│   ├── config.php
+│   └── database.php
+├── database/
+│   ├── migration.sql
+│   ├── add-cart-tables.sql
+│   ├── add-banner-position.sql
+│   ├── add-game-downloads.sql
+│   ├── add-received-content.sql
+│   ├── add-wallet-system.sql
+│   ├── fix-order-total.sql
+│   ├── payment-system.sql
+│   └── steamweb-optimizations.sql
+├── public/
+│   ├── index.php
+│   ├── webhook/
+│   │   └── seapay.php
+│   └── assets/
+│       ├── css/
+│       │   ├── admin.css
+│       │   ├── banner.css
+│       │   ├── base.css
+│       │   ├── cart.css
+│       │   ├── footer.css
+│       │   ├── game-card.css
+│       │   ├── game-content.css
+│       │   ├── game-review.css
+│       │   ├── guide.css
+│       │   ├── header.css
+│       │   ├── home.css
+│       │   ├── notification.css
+│       │   ├── profile.css
+│       │   ├── section.css
+│       │   ├── top-recharge.css
+│       │   └── video-gallery.css
+│       ├── js/
+│       │   ├── add-to-cart.js
+│       │   ├── admin-categories.js
+│       │   ├── admin-hot.js
+│       │   ├── admin-products.js
+│       │   ├── banner.js
+│       │   ├── cart-management.js
+│       │   ├── cart.js
+│       │   ├── game-card.js
+│       │   ├── game-content.js
+│       │   ├── game-review.js
+│       │   ├── navigation.js
+│       │   ├── profile.js
+│       │   ├── search.js
+│       │   ├── sound-manager.js
+│       │   └── top-recharge.js
+│       ├── svg/
+│       │   └── icons.svg
+│       └── sounds/
+│           ├── README.md
+│           └── som_matricula-464025.mp3
+├── views/
+│   ├── admin/
+│   │   ├── categories.php
+│   │   ├── dashboard.php
+│   │   ├── hot-products.php
+│   │   ├── layout.php
+│   │   ├── payments.php
+│   │   ├── product-content.php
+│   │   ├── products.php
+│   │   ├── sidebar.php
+│   │   └── users.php
+│   ├── admin/components/
+│   │   ├── alert.php
+│   │   ├── header.php
+│   │   ├── modal.php
+│   │   ├── payments-content.php
+│   │   ├── table.php
+│   │   └── tabs.php
+│   ├── client/
+│   │   ├── cart.php
+│   │   ├── checkout.php
+│   │   ├── deposit.php
+│   │   ├── deposit-callback.php
+│   │   ├── deposit-payment.php
+│   │   ├── game-content.php
+│   │   ├── game-content-view.php
+│   │   ├── hot.php
+│   │   ├── index.php
+│   │   ├── login.php
+│   │   ├── new.php
+│   │   ├── product-detail.php
+│   │   ├── profile.php
+│   │   ├── register.php
+│   │   ├── search.php
+│   │   └── steam-games.php
+│   ├── components/
+│   │   ├── banner.php
+│   │   ├── game-hot.php
+│   │   ├── game-review.php
+│   │   ├── guide.php
+│   │   ├── top-recharge.php
+│   │   └── video-gallery.php
+│   └── partials/
+│       ├── header.php
+│       ├── header-layout.php
+│       ├── footer.php
+│       └── footer-layout.php
+├── db.txt
+├── doc.txt
+├── index.php
+└── test-session.php
+
+GHI CHÚ:
+- views/partials/* được include bởi client/admin views
+- app/Helpers/functions.php dùng cho format/slug/util
+- app/Middleware/AuthMiddleware.php bảo vệ admin routes
+
+=============================================================
+GHI CHÚ HIỆU NĂNG
+-------------------------------------------------------------
+- Trang steam-games dùng phân trang SQL (LIMIT/OFFSET)
+- Cache danh mục APCu (TTL 300s), tự xóa cache khi CRUD danh mục
+- Khuyến nghị thêm index cho các cột filter nếu mở rộng
+
+=============================================================
+KẾT THÚC
+=============================================================
