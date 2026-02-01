@@ -1,0 +1,33 @@
+/* ==============================================
+   SECTION - CSS cho các section
+   ============================================== */
+
+.section {
+    margin: 30px 0;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-primary);
+}
+
+.view-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 13px;
+    transition: color 0.3s;
+}
+
+.view-more:hover {
+    color: var(--accent-hover);
+}

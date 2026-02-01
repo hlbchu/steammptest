@@ -1,0 +1,118 @@
+<!-- SVG Icons library -->
+<svg style="display: none;">
+    <!-- Logo -->
+    <symbol id="icon-logo" viewBox="0 0 800 800">
+        <style type="text/css">
+            .st1 { 
+                fill: currentColor;
+                stroke: currentColor;
+                stroke-width: 8;
+                stroke-linejoin: round;
+            }
+        </style>
+        <g transform="translate(-140, -140)">
+            <polygon class="st1" points="278.76,297.68 278.76,667.14 357.38,667.14 357.38,449.72 450.3,568.31 643.29,297.68 543.23,297.68 
+                448.87,428.43 353.1,297.68"/>
+            <path class="st1" d="M616.22,667.14l-0.27-113.08l90.33-0.29c123.3-13.97,111.5-126.86,111.5-126.86
+                c2.68-128.28-118.69-129.23-118.69-129.23l-63.67,85.9h69.49c0,0,32.27,6.41,34.68,39.48c2.41,33.07-33.52,46.89-33.52,46.89
+                l-89.86,0.02l-0.36-60.43l-79.79,107.19v150.42H616.22z"/>
+        </g>
+    </symbol>
+
+    <!-- Cart Icon -->
+    <symbol id="icon-cart" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+    </symbol>
+
+    <!-- Login Icon -->
+    <symbol id="icon-login" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M18 8h-1V6c0-2.76-2.24-5-5-5s-5 2.24-5 5v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zM9 6c0-1.66 1.34-3 3-3s3 1.34 3 3v2H9V6zm9 14H6V10h12v10zm-6-3c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"/>
+    </symbol>
+
+    <!-- Globe Icon - Language Selector -->
+    <symbol id="icon-home" viewBox="0 0 24 24">
+        <g fill="currentColor">
+            <!-- Globe circle -->
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            
+            <!-- Vertical lines -->
+            <path d="M12 2 Q 15 6, 15 12 Q 15 18, 12 22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M12 2 Q 9 6, 9 12 Q 9 18, 12 22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            
+            <!-- Horizontal lines -->
+            <path d="M 3 8 Q 8 7, 12 7 Q 16 7, 21 8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M 2 12 Q 7 12, 12 12 Q 17 12, 22 12" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M 3 16 Q 8 17, 12 17 Q 16 17, 21 16" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        </g>
+    </symbol>
+
+    <!-- Game Controller Icon -->
+    <symbol id="icon-gamepad" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M6.5 6.5C5.12 6.5 4 7.62 4 9v6c0 1.38 1.12 2.5 2.5 2.5.83 0 1.54-.41 2-1.02.46.61 1.17 1.02 2 1.02.83 0 1.54-.41 2-1.02.46.61 1.17 1.02 2 1.02.83 0 1.54-.41 2-1.02.46.61 1.17 1.02 2 1.02 1.38 0 2.5-1.12 2.5-2.5V9c0-1.38-1.12-2.5-2.5-2.5-.83 0-1.54.41-2 1.02-.46-.61-1.17-1.02-2-1.02-.83 0-1.54.41-2 1.02-.46-.61-1.17-1.02-2-1.02-.83 0-1.54.41-2 1.02-.46-.61-1.17-1.02-2-1.02zm3.5 2c.83 0 1.5.67 1.5 1.5S10.33 11 9.5 11 8 10.33 8 9.5 8.67 8 9.5 8zm5 0c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5-1.5-.67-1.5-1.5.67-1.5 1.5-1.5z"/>
+    </symbol>
+
+    <!-- Mobile Icon -->
+    <symbol id="icon-mobile" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M17 2H7c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 18H7V4h10v16zm-2.5-1h-5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5z"/>
+    </symbol>
+
+    <!-- Gift Icon -->
+    <symbol id="icon-gift" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.362-1.646l-.328.592-.328-.592A2.991 2.991 0 0 0 6 5c0 .35.07.69.18 1H4c-1.1 0-1.99.9-1.99 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM4 6h5.08L8.46 4.65c-.39-.39-1.02-.39-1.41 0L4 8.24V6zm16 15H4V8h5v3h6V8h5v13z"/>
+    </symbol>
+
+    <!-- Zap/Charge Icon -->
+    <symbol id="icon-zap" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+    </symbol>
+
+    <!-- User Icon -->
+    <symbol id="icon-user" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+    </symbol>
+
+    <!-- Search Icon -->
+    <symbol id="icon-search" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+    </symbol>
+
+    <!-- Fire Icon (Hot) -->
+    <symbol id="icon-fire" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.3 4 13c0 5.25 3.07 7.8 5.5 7.8 1.5 0 2.7-.8 3.57-1.64.48.34 1.84 1.64 3.57 1.64 2.43 0 5.5-2.55 5.5-7.8 0-5.25-3.07-7.8-5.5-7.8-1.5 0-2.7.8-3.57 1.64-.48-.34-1.84-1.64-3.57-1.64z"/>
+    </symbol>
+
+    <!-- Clipboard/Transaction Icon -->
+    <symbol id="icon-clipboard" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M19 2h-4.18C14.4.84 13.3 0 12 0c-1.3 0-2.4.84-2.82 2H5c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 0c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zm7 18H5V4h14v16z"/>
+    </symbol>
+
+    <!-- Credit Card Icon -->
+    <symbol id="icon-creditcard" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M20 8H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm0 12H4V10h16v10zm-10-3h6v2h-6z"/>
+    </symbol>
+
+    <!-- News/Article Icon -->
+    <symbol id="icon-news" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M5 3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5zm0 2h14v10H5V5zm0 12h14v2H5v-2zm1-9h4v2H6V8zm0 4h12v2H6v-2zm0-6h12v2H6V6z"/>
+    </symbol>
+
+    <!-- Joystick/Game Icon -->
+    <symbol id="icon-joystick" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M9.5 5.5c1.38 0 2.5-1.12 2.5-2.5S10.88 1 9.5 1 7 2.12 7 3.5 8.12 5.5 9.5 5.5zM14.5 5.5c1.38 0 2.5-1.12 2.5-2.5S15.88 1 14.5 1 12 2.12 12 3.5s1.12 2.5 2.5 2.5zm-11 11c0 2.2 1.8 4 4 4h7.5V19c0 1.66 1.34 3 3 3h2.5v-2h-2.5c-.83 0-1.5-.67-1.5-1.5v-.5H10V20h-2v-1.5c0-1.1.9-2 2-2h5.5v-4H7.5c-2.2 0-4 1.8-4 4z"/>
+    </symbol>
+
+    <!-- Arrow Right Icon -->
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M16.01 11H4v2h12.01v3L20 12l-3.99-4z"/>
+    </symbol>
+
+    <!-- Buy/Shopping Icon -->
+    <symbol id="icon-buy" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+    </symbol>
+
+    <!-- Star Icon -->
+    <symbol id="icon-star" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2l-2.81 6.63L2 9.24l5.46 4.73L5.82 21z"/>
+    </symbol>
+</svg>

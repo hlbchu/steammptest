@@ -1,0 +1,276 @@
+/* ==============================================
+   TOP RECHARGE - CSS cho bảng xếp hạng nạp tiền
+   ============================================== */
+
+.top-recharge-section {
+    margin: 40px 0;
+}
+
+.podium-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: 100px;
+}
+
+.podium-svg {
+    width: 620px;
+    max-width: 100%;
+    margin-top: 10px;
+    filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.45));
+}
+
+.top-recharge-grid {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 620px;
+    height: 180px;
+    z-index: 2;
+}
+
+.top-user {
+    background: linear-gradient(135deg, #1a1f2e 0%, #16192a 100%);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 100px;
+    text-align: center;
+    padding: 7px;
+}
+
+.avatar-svg {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.top-user::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+}
+
+.top-user:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 180, 216, 0.25);
+    border-color: rgba(0, 180, 216, 0.4);
+}
+
+/* TOP 1 - Vàng */
+.top-1 {
+    border-color: rgba(255, 215, 0, 0.3);
+    background: linear-gradient(135deg, #2a2416 0%, #1f1a10 100%);
+    left: 260px;
+    bottom: 100px;
+}
+
+.top-1::before {
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+}
+
+.top-1:hover {
+    border-color: rgba(255, 215, 0, 0.6);
+    box-shadow: 0 12px 32px rgba(255, 215, 0, 0.3);
+}
+
+.top-1 .rank-badge {
+    color: #ffd700;
+}
+
+/* TOP 2 - Bạc */
+.top-2 {
+    border-color: rgba(192, 192, 192, 0.3);
+    background: linear-gradient(135deg, #22252e 0%, #18191f 100%);
+    left: 105px;
+    bottom: 62px;
+}
+
+.top-2::before {
+    background: linear-gradient(90deg, transparent, #c0c0c0, transparent);
+}
+
+.top-2:hover {
+    border-color: rgba(192, 192, 192, 0.6);
+    box-shadow: 0 12px 32px rgba(192, 192, 192, 0.3);
+}
+
+.top-2 .rank-badge {
+    color: #c0c0c0;
+}
+
+/* TOP 3 - Đồng */
+.top-3 {
+    border-color: rgba(205, 127, 50, 0.3);
+    background: linear-gradient(135deg, #261f1a 0%, #1a1510 100%);
+    left: 415px;
+    bottom: 52px;
+}
+
+.top-3::before {
+    background: linear-gradient(90deg, transparent, #cd7f32, transparent);
+}
+
+.top-3:hover {
+    border-color: rgba(205, 127, 50, 0.6);
+    box-shadow: 0 12px 32px rgba(205, 127, 50, 0.3);
+}
+
+.top-3 .rank-badge {
+    color: #cd7f32;
+}
+
+/* Rank Badge */
+.rank-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.rank-badge svg {
+    filter: drop-shadow(0 4px 8px currentColor);
+}
+
+.rank-number {
+    font-size: 20px;
+    font-weight: 800;
+    position: absolute;
+    color: #0a0e27;
+    text-shadow: 0 0 8px currentColor;
+}
+
+/* User Avatar */
+.user-avatar {
+    width: 44px;
+    height: 44px;
+    margin: 4px auto 4px;
+    position: relative;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 180, 216, 0.3);
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.top-1 .user-avatar img {
+    border-color: rgba(255, 215, 0, 0.5);
+}
+
+.top-2 .user-avatar img {
+    border-color: rgba(192, 192, 192, 0.5);
+}
+
+.top-3 .user-avatar img {
+    border-color: rgba(205, 127, 50, 0.5);
+}
+
+.user-avatar:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.user-level {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #ff6b35 0%, #ff4520 100%);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 9px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+    white-space: nowrap;
+}
+
+.top-logo {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.85;
+}
+
+.top-logo-icon {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+/* User Info */
+.user-info {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.user-name {
+    font-size: 9px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.user-id {
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Courier New', monospace;
+}
+
+/* User Stats */
+@media (max-width: 1024px) {
+    .top-recharge-grid {
+        position: static;
+        transform: none;
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .top-user {
+        width: 200px;
+        transform: none;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-recharge-grid {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .top-user {
+        width: 100%;
+        max-width: 360px;
+        transform: none;
+    }
+
+    .podium-svg {
+        display: none;
+    }
+}

@@ -1,0 +1,109 @@
+/* ==============================================
+   NOTIFICATION TOAST
+   ============================================== */
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    padding: 14px 18px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+.notification.fade-out {
+    animation: slideOut 0.3s ease-out;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.notification-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+/* Success */
+.notification-success {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.15), rgba(56, 142, 60, 0.15));
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    color: #90EE90;
+}
+
+.notification-success .notification-icon {
+    fill: #4CAF50;
+}
+
+/* Error */
+.notification-error {
+    background: linear-gradient(135deg, rgba(255, 68, 68, 0.15), rgba(229, 57, 53, 0.15));
+    border: 1px solid rgba(255, 68, 68, 0.3);
+    color: #ff7777;
+}
+
+.notification-error .notification-icon {
+    fill: #ff4444;
+}
+
+/* Warning */
+.notification-warning {
+    background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(249, 168, 5, 0.15));
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    color: #FFD700;
+}
+
+.notification-warning .notification-icon {
+    fill: #FFC107;
+}
+
+/* Info */
+.notification-info {
+    background: linear-gradient(135deg, rgba(0, 180, 216, 0.15), rgba(0, 136, 170, 0.15));
+    border: 1px solid rgba(0, 180, 216, 0.3);
+    color: #87CEEB;
+}
+
+.notification-info .notification-icon {
+    fill: #00B4D8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .notification {
+        top: auto;
+        bottom: 20px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+    }
+}

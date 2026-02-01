@@ -1,0 +1,312 @@
+body {
+    background: radial-gradient(1400px 700px at 5% -5%, rgba(0, 220, 255, 0.15), transparent 55%),
+                radial-gradient(1200px 600px at 95% -10%, rgba(255, 100, 0, 0.15), transparent 50%),
+                radial-gradient(800px 600px at 50% 120%, rgba(138, 43, 226, 0.08), transparent 60%),
+                var(--primary-bg);
+    color: var(--text-primary);
+}
+
+.game-content-container {
+    max-width: 1200px;
+    margin: 40px auto 60px;
+    
+}
+
+.content-sections {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    margin-bottom: 50px;
+}
+
+.content-section {
+    background: linear-gradient(135deg, rgba(0, 220, 255, 0.03), rgba(138, 43, 226, 0.03));
+    border: 1.5px solid transparent;
+    border-image: linear-gradient(135deg, rgba(0, 220, 255, 0.3), rgba(138, 43, 226, 0.3)) 1;
+    border-radius: 16px;
+    padding: 36px 40px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25), 0 0 20px rgba(0, 220, 255, 0.05);
+    position: relative;
+}
+
+.content-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 220, 255, 0.5), transparent);
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+    border-image: linear-gradient(135deg, rgba(0, 220, 255, 0.8), rgba(138, 43, 226, 0.6)) 1;
+    box-shadow: 0 20px 60px rgba(0, 220, 255, 0.25), 0 0 40px rgba(0, 220, 255, 0.1);
+}
+
+.content-section h2 {
+    color: #00DCFF;
+    font-size: 26px;
+    margin: 0 0 20px 0;
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgba(0, 220, 255, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.content-section h2::before {
+    content: "◆";
+    color: var(--warning);
+}
+
+.content-text {
+    line-height: 1.85;
+    color: var(--text-secondary);
+    font-size: 15px;
+    margin-bottom: 16px;
+}
+
+.content-text p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.product-embed {
+    background: linear-gradient(135deg, rgba(0, 220, 255, 0.05), rgba(138, 43, 226, 0.05));
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, rgba(0, 220, 255, 0.4), rgba(138, 43, 226, 0.4)) 1;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3), 0 0 30px rgba(0, 220, 255, 0.1);
+    position: relative;
+}
+
+.product-embed::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 220, 255, 0.8), transparent);
+    z-index: 1;
+}
+
+.product-embed-header {
+    padding: 18px 28px;
+    border-bottom: 2px solid rgba(0, 220, 255, 0.2);
+    font-weight: 700;
+    color: #00DCFF;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    background: linear-gradient(90deg, rgba(0, 220, 255, 0.05), transparent);
+}
+
+.product-embed iframe {
+    width: 100%;
+    height: 1200px;
+    border: 0;
+    display: block;
+    background: var(--primary-bg);
+}
+
+/* Gallery Section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(0, 220, 255, 0.08), rgba(138, 43, 226, 0.08));
+    border: 1.5px solid rgba(0, 220, 255, 0.25);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 220, 255, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(0, 220, 255, 0.35), 0 0 30px rgba(0, 220, 255, 0.15);
+    border-color: rgba(0, 220, 255, 0.8);
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.gallery-item:hover .gallery-item-overlay {
+    opacity: 1;
+}
+
+.gallery-item-overlay span {
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Modal for gallery */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+}
+
+.modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-close {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: var(--danger);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+    background: var(--danger);
+    transform: rotate(90deg);
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.modal-nav:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.modal-nav.prev {
+    left: 20px;
+}
+
+.modal-nav.next {
+    right: 20px;
+}
+
+/* Description Section */
+.description-box {
+    background: rgba(255, 102, 0, 0.05);
+    border-left: 4px solid var(--warning);
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.description-box h3 {
+    color: var(--warning);
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.description-box p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .content-section {
+        padding: 20px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .modal-nav {
+        padding: 10px 15px;
+        font-size: 20px;
+    }
+
+    .product-embed iframe {
+        height: 1400px;
+    }
+}

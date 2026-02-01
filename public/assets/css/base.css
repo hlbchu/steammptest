@@ -1,0 +1,47 @@
+/* ==============================================
+   BASE STYLES - CSS cơ bản dùng chung
+   ============================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #0a0e27;
+    --secondary-bg: #1a1e3f;
+    --tertiary-bg: #2a2e4f;
+    --accent-color: #00b4d8;
+    --accent-hover: #00d9ff;
+    --text-primary: #ffffff;
+    --text-secondary: #c0c0c0;
+    --border-color: #3a3e5f;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    padding-top: 95px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
